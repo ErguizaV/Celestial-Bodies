@@ -472,7 +472,8 @@ ALTER TABLE ONLY public.star
 ALTER TABLE ONLY public.moon
     ADD CONSTRAINT fk_planet FOREIGN KEY (planet_id) REFERENCES public.planet(planet_id);
 
-
+ALTER TABLE ONLY public.planet
+    ADD CONSTRAINT fk_star FOREIGN KEY (star_id) REFERENCES public.star(star_id);
 --
 -- PostgreSQL database dump complete
 --
